@@ -17,6 +17,11 @@ main{
 
 }
 
+section{
+    display: flex;
+    gab: 16px;
+}
+
 .cabecalho{
     color: white;
     padding: 15px 25px;
@@ -28,6 +33,7 @@ main{
 }
 
 .cartao{
+    margin: 20px;
     width:260px;
     height:200px;
 }
