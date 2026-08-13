@@ -11,5 +11,31 @@ let tamanhoAtualFonte = 100;
 //Alto contraste
 
 bntContraste.addEventListenter("click", ()=>{
-    document.body.clasList.
+    document.body.clasList.toggle("alto-contrase");
+
+    //leitor de tela
+
+    const ativo = document.body.clasList.contains("alto-contraste");
+    bntContraste.seAttribute("aria-pressed", ativo);
+
+});
+
+//aumentar o texto
+
+bntAumentar.addEventListenter("click", () =>{
+    if (tamanhoAtualFonte < 150) {
+        tamanhoAtualFonte +=10;
+        document.documentElement.style.fontSize = `${tamanhoAtualFonte}%`
+    }
+});
+
+//diminuir o texto
+
+bntDiminuir.addEventListenter("click", () =>{
+    if (tamanhoAtualFonte >90){
+        tamanhoAtualFonte-=10;
+        document.documentElement.style,fontSize = `${tamanhoAtualFonte}%`;
+    }
+
 })
+});
